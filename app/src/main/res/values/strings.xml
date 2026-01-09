@@ -1,8 +1,12 @@
 <resources>
     <string name="app_name">Aplikasir</string>
-    <string name="selamat_datang_muhammad_zidane">Selamat Datang Muhammad Zidane</string>
+    <string name="selamat_datang_muhammad_zidane">Selamat Datang Muhammad Zidane.</string>
     <string name="rp_200_000_000">Rp. 200.000.000</string>
     <string name="pelanggan">Pelanggan</string>
     <string name="laporan">Laporan</string>
     <string name="transaksi">Transaksi</string>
+    <string name="akun">Akun</string>
+    <string name="layanan">Layanan</string>
+    <string name="tambahan">Tambahan</string>
+    <string name="printer">Printer</string>
 </resources>
