@@ -9,4 +9,8 @@
     <string name="layanan">Layanan</string>
     <string name="tambahan">Tambahan</string>
     <string name="printer">Printer</string>
+    <string name="informasi_utama">Informasi Utama</string>
+    <string name="beranda">Beranda</string>
+    <string name="analitik">Analitik</string>
+    <string name="pengaturan">Pengaturan</string>
 </resources>
