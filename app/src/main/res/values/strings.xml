@@ -13,4 +13,7 @@
     <string name="beranda">Beranda</string>
     <string name="analitik">Analitik</string>
     <string name="pengaturan">Pengaturan</string>
+    <string name="home">Home</string>
+    <string name="riwayat">Riwayat</string>
+    <string name="profil">Profil</string>
 </resources>
