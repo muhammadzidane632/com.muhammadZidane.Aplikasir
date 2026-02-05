@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F8F9FA"
+    android:background="@color/bgutama"
     tools:context=".LandingPageActivity">
 
     <ScrollView
@@ -30,7 +30,6 @@
                 android:layout_marginBottom="16dp"
                 android:fontFamily="@font/semibold"
                 android:text="@string/selamat_datang_muhammad_zidane"
-                android:textColor="@color/black"
                 android:textSize="28sp" />
 
             <ImageView
@@ -48,7 +47,7 @@
                 android:layout_marginHorizontal="24dp"
                 android:layout_marginTop="-56dp"
                 android:layout_marginBottom="24dp"
-                app:cardBackgroundColor="@color/white"
+                app:cardBackgroundColor="@color/cardBackgroundColor"
                 app:cardCornerRadius="20dp"
                 app:cardElevation="12dp">
 
@@ -85,7 +84,7 @@
                             android:layout_marginTop="8dp"
                             android:fontFamily="sans-serif-medium"
                             android:text="@string/transaksi"
-                            android:textColor="#212121"
+                            android:textColor="@color/textColorPrimary"
                             android:textSize="12sp" />
                     </LinearLayout>
 
@@ -114,7 +113,7 @@
                             android:layout_marginTop="8dp"
                             android:fontFamily="sans-serif-medium"
                             android:text="@string/pelanggan"
-                            android:textColor="#212121"
+                            android:textColor="@color/textColorPrimary"
                             android:textSize="12sp" />
                     </LinearLayout>
 
@@ -143,7 +142,7 @@
                             android:layout_marginTop="8dp"
                             android:fontFamily="sans-serif-medium"
                             android:text="@string/laporan"
-                            android:textColor="#212121"
+                            android:textColor="@color/textColorPrimary"
                             android:textSize="12sp" />
                     </LinearLayout>
 
@@ -157,7 +156,7 @@
                 android:layout_marginBottom="12dp"
                 android:fontFamily="sans-serif-medium"
                 android:text="@string/informasi_utama"
-                android:textColor="#616161"
+                android:textColor="@color/textColorSecondary"
                 android:textSize="14sp" />
 
             <androidx.cardview.widget.CardView
@@ -165,7 +164,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="24dp"
                 android:layout_marginBottom="24dp"
-                app:cardBackgroundColor="@color/white"
+                app:cardBackgroundColor="@color/cardBackgroundColor"
                 app:cardCornerRadius="24dp"
                 app:cardElevation="6dp">
 
@@ -188,7 +187,7 @@
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/semibold"
                             android:text="@string/rp_200_000_000"
-                            android:textColor="@color/black"
+                            android:textColor="@color/textColorPrimary"
                             android:textSize="26sp"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent" />
@@ -210,7 +209,7 @@
                         android:layout_height="1dp"
                         android:layout_marginHorizontal="24dp"
                         android:layout_marginBottom="20dp"
-                        android:background="#EEEEEE" />
+                        android:background="@color/dividerColor" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -243,7 +242,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="8dp"
                                 android:text="@string/akun"
-                                android:textColor="#424242"
+                                android:textColor="@color/textColorSecondary"
                                 android:textSize="11sp" />
                         </LinearLayout>
 
@@ -271,7 +270,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="8dp"
                                 android:text="@string/layanan"
-                                android:textColor="#424242"
+                                android:textColor="@color/textColorSecondary"
                                 android:textSize="11sp" />
                         </LinearLayout>
 
@@ -298,7 +297,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="8dp"
                                 android:text="@string/tambahan"
-                                android:textColor="#424242"
+                                android:textColor="@color/textColorSecondary"
                                 android:textSize="11sp" />
                         </LinearLayout>
 
@@ -325,7 +324,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="8dp"
                                 android:text="@string/printer"
-                                android:textColor="#424242"
+                                android:textColor="@color/textColorSecondary"
                                 android:textSize="11sp" />
                         </LinearLayout>
 
@@ -342,7 +341,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="-28dp"
-        app:cardBackgroundColor="#FFFFFF"
+        app:cardBackgroundColor="@color/cardBackgroundColor"
         app:cardCornerRadius="32dp"
         app:cardElevation="24dp"
         tools:ignore="VisualLintBounds">
@@ -384,7 +383,7 @@
                     android:layout_marginTop="4dp"
                     android:fontFamily="sans-serif-medium"
                     android:text="@string/beranda"
-                    android:textColor="#212121"
+                    android:textColor="@color/textColorPrimary"
                     android:textSize="10sp"
                     tools:ignore="SmallSp" />
             </LinearLayout>
@@ -416,7 +415,7 @@
                     android:layout_marginTop="4dp"
                     android:fontFamily="sans-serif-medium"
                     android:text="@string/analitik"
-                    android:textColor="#212121"
+                    android:textColor="@color/textColorPrimary"
                     android:textSize="10sp"
                     tools:ignore="SmallSp" />
             </LinearLayout>
@@ -448,7 +447,7 @@
                     android:layout_marginTop="4dp"
                     android:fontFamily="sans-serif-medium"
                     android:text="@string/pengaturan"
-                    android:textColor="#212121"
+                    android:textColor="@color/textColorPrimary"
                     android:textSize="13sp" />
             </LinearLayout>
 
