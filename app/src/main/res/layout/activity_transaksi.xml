@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".transaksi"
+    android:background="@color/bgutama"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <ImageButton
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/back"
+            android:layout_marginTop="44dp"
+            android:layout_marginStart="36dp"
+            android:importantForAccessibility="no" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="46dp"
+            android:layout_marginStart="33dp"
+            android:text="@string/daftar_transaksi"
+            android:textSize="24sp"
+            android:fontFamily="@font/wssemibold"
+            />
+    </LinearLayout>
+
+    <EditText
+        android:layout_marginTop="26dp"
+        android:layout_gravity="center"
+        android:id="@+id/et_search"
+        android:layout_width="342dp"
+        android:layout_height="61dp"
+        android:background="@drawable/bg_input_outline"
+        android:hint="@string/cari_transaksi"
+        android:importantForAutofill="no"
+        android:padding="16dp"
+        android:textSize="16sp"
+        android:inputType="text"
+        android:maxLines="1"
+
+         />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="39dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/wsregular"
+        android:text="@string/kategori"
+        android:textColor="#616161"
+        android:textSize="12sp" />
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+        <LinearLayout
+            android:id="@+id/chip_group"
+            android:layout_marginTop="12dp"
+            android:layout_marginStart="40dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/chip_semua"
+                android:text="@string/semua"
+                android:textSize="14sp"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:background="@drawable/bg_chip_active"
+                android:paddingStart="24dp"
+                android:paddingEnd="24dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:textAllCaps="false"
+                android:stateListAnimator="@null"
+                style="?android:attr/borderlessButtonStyle" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/chip_penjualan"
+                android:text="@string/penjualan"
+                android:textSize="14sp"
+                android:textColor="#000000"
+                android:background="@drawable/bg_chip_inactive"
+                android:paddingStart="24dp"
+                android:paddingEnd="24dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:textAllCaps="false"
+                android:stateListAnimator="@null"
+                style="?android:attr/borderlessButtonStyle" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/chip_tambah"
+                android:text="@string/tambah"
+                android:textSize="14sp"
+                android:textColor="#000000"
+                android:background="@drawable/bg_chip_inactive"
+                android:paddingStart="24dp"
+                android:paddingEnd="24dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="false"
+                android:stateListAnimator="@null"
+                style="?android:attr/borderlessButtonStyle" />
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="39dp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/wsregular"
+        android:text="@string/hari_ini"
+        android:textColor="#616161"
+        android:textSize="12sp" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        app:strokeColor="#E0E0E0"
+        app:strokeWidth="1dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="0dp"
+        android:layout_marginTop="12dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_launcher_foreground"
+                android:background="@drawable/bg_chip_active"
+                android:importantForAccessibility="no" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginStart="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sample_transaction_id"
+                    android:textSize="16sp"
+                    android:textColor="#000000"
+                    android:fontFamily="@font/wssemibold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sample_transaction_date"
+                    android:textSize="12sp"
+                    android:textColor="#616161"
+                    android:fontFamily="@font/wsregular"
+                    android:layout_marginTop="4dp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/sample_transaction_amount"
+                android:textSize="16sp"
+                android:textColor="#4CAF50"
+                android:fontFamily="@font/wssemibold" />
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+</LinearLayout>

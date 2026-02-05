@@ -1,7 +1,7 @@
 package com.muhammadZidane.aplikasir
 
 import android.os.Bundle
-import android.widget.LinearLayout
+import android.view.View
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -23,19 +23,19 @@ class LandingPageActivity : AppCompatActivity() {
     }
     
     private fun setupNavbar() {
-        val navHome = findViewById<LinearLayout>(R.id.nav_home)
-        val navAnalytics = findViewById<LinearLayout>(R.id.nav_analytics)
-        val navSettings = findViewById<LinearLayout>(R.id.nav_settings)
-        
-        navHome.setOnClickListener {
+        val navHome = findViewById<View>(R.id.nav_home)
+        val navAnalytics = findViewById<View>(R.id.nav_analytics)
+        val navSettings = findViewById<View>(R.id.nav_settings)
+
+        navHome?.setOnClickListener {
             Toast.makeText(this, "Beranda", Toast.LENGTH_SHORT).show()
         }
         
-        navAnalytics.setOnClickListener {
+        navAnalytics?.setOnClickListener {
             Toast.makeText(this, "Analitik", Toast.LENGTH_SHORT).show()
         }
         
-        navSettings.setOnClickListener {
+        navSettings?.setOnClickListener {
             Toast.makeText(this, "Pengaturan", Toast.LENGTH_SHORT).show()
         }
     }
