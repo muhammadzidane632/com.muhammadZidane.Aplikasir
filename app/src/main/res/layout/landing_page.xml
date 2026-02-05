@@ -263,7 +263,8 @@
                                 android:contentDescription="@string/layanan"
                                 android:focusable="true"
                                 android:foreground="?attr/selectableItemBackgroundBorderless"
-                                tools:ignore="DuplicateSpeakableTextCheck,TouchTargetSizeCheck" />
+                                tools:ignore="DuplicateSpeakableTextCheck,TouchTargetSizeCheck"
+                                 />
 
                             <TextView
                                 android:layout_width="wrap_content"
@@ -373,7 +374,6 @@
                 <ImageView
                     android:layout_width="24dp"
                     android:layout_height="24dp"
-                    android:background="@drawable/navbar_item_bg"
                     android:contentDescription="@string/app_name"
                     android:padding="2dp"
                     android:src="@drawable/ic_home" />
@@ -406,10 +406,9 @@
                 <ImageView
                     android:layout_width="24dp"
                     android:layout_height="24dp"
-                    android:background="@drawable/navbar_item_bg"
                     android:contentDescription="@string/app_name"
                     android:padding="2dp"
-                    android:src="@drawable/ic_analytics" />
+                    android:src="@drawable/ic_analytic" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -439,10 +438,9 @@
                 <ImageView
                     android:layout_width="24dp"
                     android:layout_height="24dp"
-                    android:background="@drawable/navbar_item_bg"
                     android:contentDescription="@string/app_name"
                     android:padding="2dp"
-                    android:src="@drawable/ic_settings" />
+                    android:src="@drawable/ic_setting_1" />
 
                 <TextView
                     android:layout_width="wrap_content"
