@@ -16,4 +16,14 @@
     <string name="home">Home</string>
     <string name="riwayat">Riwayat</string>
     <string name="profil">Profil</string>
+    <string name="daftar_transaksi">Daftar Transaksi</string>
+    <string name="cari_transaksi">Cari Transaksi.....</string>
+    <string name="kategori">Kategori :</string>
+    <string name="semua">Semua</string>
+    <string name="penjualan">Penjualan</string>
+    <string name="tambah">+ Tambah</string>
+    <string name="hari_ini">HARI INI</string>
+    <string name="sample_transaction_id">Penjualan #001</string>
+    <string name="sample_transaction_date">12 Jan 2025 • 14:30</string>
+    <string name="sample_transaction_amount">Rp 150.000</string>
 </resources>

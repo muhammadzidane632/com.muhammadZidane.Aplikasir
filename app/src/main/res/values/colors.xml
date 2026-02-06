@@ -7,4 +7,7 @@
     <color name="textColorSecondary">#616161</color>
     <color name="cardBackgroundColor">@color/white</color>
     <color name="dividerColor">#EEEEEE</color>
+    <color name="teal_accent">#00DDB4</color>
+    <color name="text_hint">#8A94A6</color>
+    <color name="black_border">#000000</color>
 </resources>
