@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "46306915310",
+    "firebase_url": "https://com-aplikasir-m-zidane-default-rtdb.firebaseio.com",
+    "project_id": "com-aplikasir-m-zidane",
+    "storage_bucket": "com-aplikasir-m-zidane.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:46306915310:android:605b972675f6ab98b0d4ff",
+        "android_client_info": {
+          "package_name": "com.muhammadZidane.aplikasir"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAci3iwp4qPhX4vk4znYplkb0tUTNOdY3c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
