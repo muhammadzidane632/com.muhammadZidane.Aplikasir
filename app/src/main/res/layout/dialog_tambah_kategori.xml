@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="20dp"
+    android:layout_margin="16dp"
+    app:cardElevation="8dp"
+    android:backgroundTint="#FFFFFF">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="24dp">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tambah Kategori"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/btnClose"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_close"
+            app:tint="#000000"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tvTitle"
+            app:layout_constraintBottom_toBottomOf="@id/tvTitle"/>
+
+        <TextView
+            android:id="@+id/tvLabelKategori"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="KATEGORI"
+            android:textSize="12sp"
+            android:textColor="#8E8E93"
+            android:letterSpacing="0.1"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+
+        <GridLayout
+            android:id="@+id/gridKategori"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:columnCount="2"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/tvLabelKategori"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+        </GridLayout>
+
+        <LinearLayout
+            android:id="@+id/containerInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="12dp"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@id/gridKategori">
+
+            <EditText
+                android:id="@+id/etInputKategori"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/bg_cat_unselected"
+                android:hint="Masukkan nama kategori..."
+                android:textSize="14sp"
+                android:paddingHorizontal="16dp"
+                android:inputType="textCapWords"
+                android:maxLines="1"/>
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnSimpan"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="40dp"
+            android:text="Selesai"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:background="@drawable/bg_btn_selesai"
+            app:layout_constraintTop_toBottomOf="@id/containerInput"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

@@ -20,7 +20,6 @@ class Splash : AppCompatActivity() {
             insets
         }
 
-        // Logic splash screen: pindah ke LandingPageActivity setelah 3 detik
         Handler(Looper.getMainLooper()).postDelayed({
             val intent = Intent(this, LandingPageActivity::class.java)
             startActivity(intent)
