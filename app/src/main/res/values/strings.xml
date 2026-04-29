@@ -26,4 +26,5 @@
     <string name="sample_transaction_id">Penjualan #001</string>
     <string name="sample_transaction_date">12 Jan 2025 • 14:30</string>
     <string name="sample_transaction_amount">Rp 150.000</string>
+    <string name="ListProduk">List Produk</string>
 </resources>

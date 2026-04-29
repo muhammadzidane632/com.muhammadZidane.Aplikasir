@@ -10,25 +10,39 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Aplikasir">
-        <activity
-            android:name=".Transaksi"
-            android:exported="true">
 
+        <activity
+            android:name=".SplashActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
+
+        <activity
+            android:name=".Transaksi"
+            android:exported="false" />
+
         <activity
             android:name=".LandingPageActivity"
             android:exported="false" />
+
         <activity
             android:name=".Splash"
-            android:exported="false">
+            android:exported="false" />
 
-        </activity>
+        <activity
+            android:name=".ui.ListProdukActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".ui.TambahProdukActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".ui.CheckoutActivity"
+            android:exported="false" />
     </application>
 
 </manifest>

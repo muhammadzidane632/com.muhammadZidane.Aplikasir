@@ -1,5 +1,6 @@
 package com.muhammadZidane.aplikasir
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
@@ -7,6 +8,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.muhammadZidane.aplikasir.ui.ListProdukActivity
 
 class LandingPageActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -19,7 +21,28 @@ class LandingPageActivity : AppCompatActivity() {
             insets
         }
         
+        setupMenu()
         setupNavbar()
+    }
+
+    private fun setupMenu() {
+        val btnTransaksi = findViewById<View>(R.id.btn_transaksi_container)
+        val btnProduk = findViewById<View>(R.id.btn_produk_container)
+        val btnLaporan = findViewById<View>(R.id.btn_laporan_container)
+
+        btnTransaksi?.setOnClickListener {
+            val intent = Intent(this, Transaksi::class.java)
+            startActivity(intent)
+        }
+
+        btnProduk?.setOnClickListener {
+            val intent = Intent(this, ListProdukActivity::class.java)
+            startActivity(intent)
+        }
+
+        btnLaporan?.setOnClickListener {
+            Toast.makeText(this, "Fitur Laporan segera hadir", Toast.LENGTH_SHORT).show()
+        }
     }
     
     private fun setupNavbar() {
@@ -28,7 +51,7 @@ class LandingPageActivity : AppCompatActivity() {
         val navSettings = findViewById<View>(R.id.nav_settings)
 
         navHome?.setOnClickListener {
-            Toast.makeText(this, "Beranda", Toast.LENGTH_SHORT).show()
+            // Sudah di Home
         }
         
         navAnalytics?.setOnClickListener {
