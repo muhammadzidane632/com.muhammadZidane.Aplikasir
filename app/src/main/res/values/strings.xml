@@ -1,30 +1,3 @@
 <resources>
-    <string name="app_name">Aplikasir</string>
-    <string name="selamat_datang_muhammad_zidane">Selamat Datang Muhammad Zidane.</string>
-    <string name="rp_200_000_000">Rp. 200.000.000</string>
-    <string name="pelanggan">Pelanggan</string>
-    <string name="laporan">Laporan</string>
-    <string name="transaksi">Transaksi</string>
-    <string name="akun">Akun</string>
-    <string name="layanan">Layanan</string>
-    <string name="tambahan">Tambahan</string>
-    <string name="printer">Printer</string>
-    <string name="informasi_utama">Informasi Utama</string>
-    <string name="beranda">Beranda</string>
-    <string name="analitik">Analitik</string>
-    <string name="pengaturan">Pengaturan</string>
-    <string name="home">Home</string>
-    <string name="riwayat">Riwayat</string>
-    <string name="profil">Profil</string>
-    <string name="daftar_transaksi">Daftar Transaksi</string>
-    <string name="cari_transaksi">Cari Transaksi.....</string>
-    <string name="kategori">Kategori :</string>
-    <string name="semua">Semua</string>
-    <string name="penjualan">Penjualan</string>
-    <string name="tambah">+ Tambah</string>
-    <string name="hari_ini">HARI INI</string>
-    <string name="sample_transaction_id">Penjualan #001</string>
-    <string name="sample_transaction_date">12 Jan 2025 • 14:30</string>
-    <string name="sample_transaction_amount">Rp 150.000</string>
-    <string name="ListProduk">List Produk</string>
+    <string name="app_name">Aplicash</string>
 </resources>

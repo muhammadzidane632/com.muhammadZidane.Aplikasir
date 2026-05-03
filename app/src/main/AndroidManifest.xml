@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <application
         android:allowBackup="true"
@@ -9,40 +10,18 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Aplikasir">
-
+        android:theme="@style/Theme.Aplicash">
         <activity
-            android:name=".SplashActivity"
-            android:exported="true">
+            android:name=".MainActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.Aplicash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity
-            android:name=".Transaksi"
-            android:exported="false" />
-
-        <activity
-            android:name=".LandingPageActivity"
-            android:exported="false" />
-
-        <activity
-            android:name=".Splash"
-            android:exported="false" />
-
-        <activity
-            android:name=".ui.ListProdukActivity"
-            android:exported="false" />
-
-        <activity
-            android:name=".ui.TambahProdukActivity"
-            android:exported="false" />
-
-        <activity
-            android:name=".ui.CheckoutActivity"
-            android:exported="false" />
     </application>
 
 </manifest>
