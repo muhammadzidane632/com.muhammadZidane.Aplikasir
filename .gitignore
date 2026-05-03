@@ -13,5 +13,9 @@
 .externalNativeBuild
 .cxx
 local.properties
-#t
+
+# Sensitive Files
 google-services.json
+*.jks
+*.keystore
+secrets.properties
