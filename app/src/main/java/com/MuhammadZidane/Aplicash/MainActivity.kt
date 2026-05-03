@@ -14,6 +14,7 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.*
 import androidx.compose.material.icons.outlined.*
+import androidx.compose.material.icons.rounded.*
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
@@ -108,8 +109,8 @@ fun HomeScreen(
                             verticalArrangement = Arrangement.spacedBy(16.dp),
                             horizontalAlignment = Alignment.CenterHorizontally
                         ) {
-                            SidebarNeoItem(Icons.Default.Home, "Beranda", true)
-                            SidebarNeoItem(Icons.Default.Menu, "Riwayat", false)
+                            SidebarNeoItem(Icons.Rounded.Home, "Beranda", true)
+                            SidebarNeoItem(Icons.Rounded.Menu, "Riwayat", false)
                             Box(
                                 modifier = Modifier
                                     .size(60.dp)
@@ -117,10 +118,10 @@ fun HomeScreen(
                                     .background(Brush.linearGradient(listOf(BrandBlue, BrandCyan))),
                                 contentAlignment = Alignment.Center
                             ) {
-                                Icon(Icons.Default.Search, contentDescription = "Scan", tint = Color.White, modifier = Modifier.size(28.dp))
+                                Icon(Icons.Rounded.Search, contentDescription = "Scan", tint = Color.White, modifier = Modifier.size(28.dp))
                             }
-                            SidebarNeoItem(Icons.Default.Info, "Statistik", false)
-                            SidebarNeoItem(Icons.Default.Person, "Profil", false)
+                            SidebarNeoItem(Icons.Rounded.Info, "Statistik", false)
+                            SidebarNeoItem(Icons.Rounded.Person, "Profil", false)
                         }
 
                         // Middle Content
@@ -299,7 +300,7 @@ fun TopHeaderNeo(userProfile: UserProfile) {
                 .background(Color.White.copy(alpha = 0.15f), CircleShape)
                 .size(44.dp)
         ) {
-            Icon(Icons.Outlined.Notifications, contentDescription = "Notifikasi", tint = Color.White)
+            Icon(Icons.Rounded.Notifications, contentDescription = "Notifikasi", tint = Color.White)
         }
     }
 }
@@ -312,7 +313,7 @@ fun SearchSectionNeo(query: String, onQueryChange: (String) -> Unit) {
         onValueChange = onQueryChange,
         modifier = Modifier.fillMaxWidth(),
         placeholder = { Text("Cari transaksi berjalan...", color = Color.White.copy(alpha = 0.6f)) },
-        leadingIcon = { Icon(Icons.Default.Search, contentDescription = null, tint = Color.White.copy(alpha = 0.8f)) },
+        leadingIcon = { Icon(Icons.Rounded.Search, contentDescription = null, tint = Color.White.copy(alpha = 0.8f)) },
         shape = RoundedCornerShape(20.dp),
         colors = OutlinedTextFieldDefaults.colors(
             unfocusedBorderColor = Color.White.copy(alpha = 0.3f),
@@ -398,10 +399,10 @@ fun ActionGridNeo() {
             modifier = Modifier.fillMaxWidth(),
             horizontalArrangement = Arrangement.SpaceBetween
         ) {
-            PlayfulMenuIcon(Icons.Default.ShoppingCart, "Kasir", BrandBlueLight, BrandBlue)
-            PlayfulMenuIcon(Icons.Default.Menu, "Laporan", Color(0xFFFCE7F3), AccentPink)
-            PlayfulMenuIcon(Icons.Default.Star, "Produk", Color(0xFFFEF3C7), AccentOrange)
-            PlayfulMenuIcon(Icons.Default.Build, "Printer", Color(0xFFE0F2FE), BrandCyan)
+            PlayfulMenuIcon(Icons.Rounded.ShoppingCart, "Kasir", BrandBlue)
+            PlayfulMenuIcon(Icons.Rounded.Menu, "Laporan", BrandBlue)
+            PlayfulMenuIcon(Icons.Rounded.Star, "Produk", BrandBlue)
+            PlayfulMenuIcon(Icons.Rounded.Build, "Printer", BrandBlue)
         }
 
         // Engaging massive CTA like modern promo cards
@@ -424,7 +425,7 @@ fun ActionGridNeo() {
                     modifier = Modifier.size(56.dp).clip(CircleShape).background(Color.White),
                     contentAlignment = Alignment.Center
                 ) {
-                    Icon(Icons.Default.Add, contentDescription = "Add", tint = BrandBlue, modifier = Modifier.size(32.dp))
+                    Icon(Icons.Rounded.Add, contentDescription = "Add", tint = BrandBlue, modifier = Modifier.size(32.dp))
                 }
             }
         }
@@ -432,14 +433,15 @@ fun ActionGridNeo() {
 }
 
 @Composable
-fun PlayfulMenuIcon(icon: ImageVector, title: String, bgColor: Color, iconColor: Color) {
+fun PlayfulMenuIcon(icon: ImageVector, title: String, iconColor: Color) {
     Column(
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.spacedBy(8.dp)
     ) {
         Surface(
             shape = RoundedCornerShape(20.dp),
-            color = bgColor,
+            color = CardWhite,
+            shadowElevation = 4.dp,
             modifier = Modifier.size(68.dp)
         ) {
             Box(contentAlignment = Alignment.Center) {
@@ -460,14 +462,14 @@ fun SummarySectionNeo(data: SummaryData) {
                 modifier = Modifier.weight(1f),
                 title = "Total Penjualan",
                 value = data.totalOrders.toString(),
-                icon = Icons.Outlined.CheckCircle,
+                icon = Icons.Rounded.Check,
                 brandColor = BrandBlue
             )
             NeoSummaryCard(
                 modifier = Modifier.weight(1f),
                 title = "Item Terlaris",
                 value = data.bestSellingProduct,
-                icon = Icons.Outlined.Star,
+                icon = Icons.Rounded.Star,
                 brandColor = AccentOrange
             )
         }
@@ -547,37 +549,41 @@ fun AppBottomNavigationNeo() {
             .fillMaxWidth()
             .padding(16.dp)
             .navigationBarsPadding(),
-        contentAlignment = Alignment.Center
+        contentAlignment = Alignment.BottomCenter
     ) {
         Surface(
             shape = RoundedCornerShape(32.dp),
             color = CardWhite,
-            shadowElevation = 24.dp,
+            shadowElevation = 16.dp,
         ) {
             Row(
-                modifier = Modifier.padding(horizontal = 24.dp, vertical = 12.dp).fillMaxWidth(),
+                modifier = Modifier.padding(horizontal = 24.dp).fillMaxWidth().height(80.dp),
                 horizontalArrangement = Arrangement.SpaceBetween,
                 verticalAlignment = Alignment.CenterVertically
             ) {
-                BottomNavItem(Icons.Default.Home, "Beranda", true)
-                BottomNavItem(Icons.Default.Menu, "Riwayat", false)
+                BottomNavItem(Icons.Rounded.Home, "Beranda", true)
+                BottomNavItem(Icons.Rounded.Menu, "Riwayat", false)
 
-                // Massive immersive scan button
-                Box(
-                    modifier = Modifier
-                        .size(60.dp)
-                        .clip(CircleShape)
-                        .background(
-                            Brush.linearGradient(listOf(BrandBlue, BrandCyan))
-                        ).offset(y = (-10).dp),
-                    contentAlignment = Alignment.Center
-                ) {
-                    Icon(Icons.Default.Search, contentDescription = "Scan", tint = Color.White, modifier = Modifier.size(28.dp))
-                }
+                // Spacer for massive immersive scan button to prevent overlap
+                Spacer(modifier = Modifier.width(60.dp))
 
-                BottomNavItem(Icons.Default.Info, "Statistik", false)
-                BottomNavItem(Icons.Default.Person, "Profil", false)
+                BottomNavItem(Icons.Rounded.Info, "Statistik", false)
+                BottomNavItem(Icons.Rounded.Person, "Profil", false)
             }
+        }
+        
+        // Massive immersive scan button placed outside Surface to avoid clipping
+        Box(
+            modifier = Modifier
+                .padding(bottom = 28.dp)
+                .size(64.dp)
+                .clip(CircleShape)
+                .background(
+                    Brush.linearGradient(listOf(BrandBlue, BrandCyan))
+                ),
+            contentAlignment = Alignment.Center
+        ) {
+            Icon(Icons.Rounded.Search, contentDescription = "Scan", tint = Color.White, modifier = Modifier.size(28.dp))
         }
     }
 }
