@@ -2,10 +2,12 @@
 package com.MuhammadZidane.Aplicash
 
 import android.os.Bundle
+import android.content.Intent
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
@@ -20,6 +22,7 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalConfiguration
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
@@ -77,6 +80,7 @@ fun HomeScreen(
 
     val configuration = LocalConfiguration.current
     val isWideScreen = configuration.screenWidthDp > 600
+    val context = LocalContext.current
 
     Box(modifier = Modifier.fillMaxSize()) {
         Scaffold(
@@ -134,7 +138,7 @@ fun HomeScreen(
                             item { SearchSectionNeo(searchQuery, onQueryChange = { searchQuery = it }) }
                             item { RevenueBannerNeo(revenueState) }
                             item { Spacer(modifier = Modifier.height(28.dp)) }
-                            item { ActionGridNeo() }
+                            item { ActionGridNeo(onTransaksiClick = { context.startActivity(Intent(context, TransactionActivity::class.java)) }) }
                         }
 
                         // Right Content (Transactions & Summary)
@@ -194,7 +198,7 @@ fun HomeScreen(
                         }
                         item {
                             Box(modifier = Modifier.padding(horizontal = 20.dp, vertical = 28.dp)) {
-                                ActionGridNeo()
+                                ActionGridNeo(onTransaksiClick = { context.startActivity(Intent(context, TransactionActivity::class.java)) })
                             }
                         }
                         item {
@@ -391,7 +395,7 @@ fun RevenueBannerNeo(state: RevenueState) {
 }
 
 @Composable
-fun ActionGridNeo() {
+fun ActionGridNeo(onTransaksiClick: () -> Unit = {}) {
     Column(verticalArrangement = Arrangement.spacedBy(20.dp)) {
         Text("Layanan Utama", fontWeight = FontWeight.Bold, fontSize = 18.sp, color = TextHeadline)
 
@@ -399,7 +403,7 @@ fun ActionGridNeo() {
             modifier = Modifier.fillMaxWidth(),
             horizontalArrangement = Arrangement.SpaceBetween
         ) {
-            PlayfulMenuIcon(Icons.Rounded.ShoppingCart, "Kasir", BrandBlue)
+            PlayfulMenuIcon(Icons.Rounded.ShoppingCart, "Transaksi", BrandBlue, onClick = onTransaksiClick)
             PlayfulMenuIcon(Icons.Rounded.Menu, "Laporan", BrandBlue)
             PlayfulMenuIcon(Icons.Rounded.Star, "Produk", BrandBlue)
             PlayfulMenuIcon(Icons.Rounded.Build, "Printer", BrandBlue)
@@ -433,8 +437,9 @@ fun ActionGridNeo() {
 }
 
 @Composable
-fun PlayfulMenuIcon(icon: ImageVector, title: String, iconColor: Color) {
+fun PlayfulMenuIcon(icon: ImageVector, title: String, iconColor: Color, onClick: () -> Unit = {}) {
     Column(
+        modifier = Modifier.clickable(onClick = onClick),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.spacedBy(8.dp)
     ) {
@@ -571,7 +576,7 @@ fun AppBottomNavigationNeo() {
                 BottomNavItem(Icons.Rounded.Person, "Profil", false)
             }
         }
-        
+
         // Massive immersive scan button placed outside Surface to avoid clipping
         Box(
             modifier = Modifier
